@@ -1,14 +1,8 @@
 <template>
   <div class="flex h-auto bg-gray-200">
-    <div
-      @mouseover="expandSidebar"
-      @mouseleave="collapseSidebar"
+    <div @mouseover="expandSidebar" @mouseleave="collapseSidebar"
       :class="['transition-all duration-300', { 'w-64': isExpanded, 'w-20': !isExpanded }]"
-      class="bg-gray-800 text-white flex flex-col"
-    >
-      <div class="flex items-center justify-center h-20">
-        <span class="text-2xl font-bold">Admin</span>
-      </div>
+      class="bg-sky-900 text-white flex flex-col">
       <ul class="flex flex-col mt-10">
         <li v-for="item in menuItems" :key="item.name" class="flex items-center h-12 px-6 hover:bg-gray-700">
           <router-link :to="item.path" class="flex items-center w-full">
